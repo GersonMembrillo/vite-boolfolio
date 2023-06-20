@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h1>Contact us</h1>
+    <h1 class="container">
+      Contact us
+    </h1>
   </div>
 </template>
 

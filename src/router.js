@@ -1,10 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
 import HomePage from './pages/HomePage.vue';
-import ProductList from './pages/ProductList.vue';
+import ProjectList from './pages/ProjectList.vue';
 import AboutUs from './pages/AboutUs.vue';
 import ContactUs from './pages/ContactUs.vue';
-import SingleProduct from './pages/SingleProduct.vue';
+import SingleProject from './pages/SingleProject.vue';
 import NotFound from './pages/NotFound.vue';
 
 const router = createRouter({
@@ -16,9 +16,9 @@ const router = createRouter({
 			component: HomePage,
 		},
 		{
-			path: '/products',
-			name: 'products',
-			component: ProductList,
+			path: '/projects',
+			name: 'projects',
+			component: ProjectList,
 		},
 		{
 			path: '/about',
@@ -31,9 +31,9 @@ const router = createRouter({
 			component: ContactUs,
 		},
 		{
-			path: '/products/:slug',
-			name: 'single-product',
-			component: SingleProduct,
+			path: '/projects/:slug',
+			name: 'single-project',
+			component: SingleProject,
 		},
 		// facoltativo: pagina 404
 		{
