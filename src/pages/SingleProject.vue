@@ -1,7 +1,13 @@
 <template>
   <div class="container">
-    <h1>{{ project.title }}</h1>
-    <img :src="project.image" :alt="project.title">
+    <!-- se lascio in return project: '', v-if non serve -->
+    <div v-if="project">
+     <div class="card text-center">
+    <img :src="project.image" :alt="project.title" class="card-img-top">
+    <h1 class="card-title">{{ project.title }}</h1>
+    <p>{{ project.description }}</p>
+    </div>
+    </div>
   </div>
 </template>
 
@@ -32,7 +38,7 @@ import { store } from '../store';
     mounted() {
     // console.log(this.$router);
     // console.log(this.$route)
-    $this.getProject();
+    this.getProject();
     }
   }
 </script>
